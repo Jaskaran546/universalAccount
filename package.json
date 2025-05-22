@@ -1,0 +1,63 @@
+{
+  "name": "universalAccountSdk",
+  "version": "0.1.0",
+  "description": "TypeScript SDK for viem Ethereum library",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "browser": {
+    "buffer": "buffer",
+    "events": "events",
+    "crypto": "crypto-browserify",
+    "stream": "stream-browserify"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "test": "jest",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "ethereum",
+    "viem",
+    "blockchain",
+    "web3",
+    "sdk"
+  ],
+  "author": "Jaskaran",
+  "license": "MIT",
+  "peerDependencies": {
+    "viem": "^2.30.0"
+  },
+  "devDependencies": {
+    "@safe-global/protocol-kit": "4.1.0",
+    "@safe-global/relay-kit": "3.1.0",
+    "@types/node": "^22.15.21",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.1",
+    "events": "^3.3.0",
+    "stream-browserify": "^3.0.0",
+    "tsup": "^8.5.0"
+  },
+  "dependencies": {
+    "semver": "^7.7.2",
+    "buffer": "^6.0.3",
+    "events": "^3.3.0",
+    "crypto-browserify": "^3.12.0",
+    "stream-browserify": "^3.0.0",
+    "process": "^0.11.10"
+  }
+}
